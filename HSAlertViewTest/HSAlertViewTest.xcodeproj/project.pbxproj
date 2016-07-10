@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D82A0FF51D31DCCE00566371 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A0FF41D31DCCE00566371 /* main.m */; };
+		D82A0FF81D31DCCE00566371 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A0FF71D31DCCE00566371 /* AppDelegate.m */; };
+		D82A0FFB1D31DCCE00566371 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A0FFA1D31DCCE00566371 /* ViewController.m */; };
+		D82A0FFE1D31DCCE00566371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82A0FFC1D31DCCE00566371 /* Main.storyboard */; };
+		D82A10001D31DCCE00566371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82A0FFF1D31DCCE00566371 /* Assets.xcassets */; };
+		D82A10031D31DCCE00566371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82A10011D31DCCE00566371 /* LaunchScreen.storyboard */; };
+		D82A100C1D31DD4400566371 /* HSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A100B1D31DD4400566371 /* HSAlertView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D82A0FF01D31DCCE00566371 /* HSAlertViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSAlertViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82A0FF41D31DCCE00566371 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D82A0FF61D31DCCE00566371 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D82A0FF71D31DCCE00566371 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D82A0FF91D31DCCE00566371 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D82A0FFA1D31DCCE00566371 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D82A0FFD1D31DCCE00566371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D82A0FFF1D31DCCE00566371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D82A10021D31DCCE00566371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D82A10041D31DCCE00566371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82A100A1D31DD4400566371 /* HSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSAlertView.h; sourceTree = "<group>"; };
+		D82A100B1D31DD4400566371 /* HSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSAlertView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D82A0FED1D31DCCE00566371 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D82A0FE71D31DCCE00566371 = {
+			isa = PBXGroup;
+			children = (
+				D82A100A1D31DD4400566371 /* HSAlertView.h */,
+				D82A100B1D31DD4400566371 /* HSAlertView.m */,
+				D82A0FF21D31DCCE00566371 /* HSAlertViewTest */,
+				D82A0FF11D31DCCE00566371 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D82A0FF11D31DCCE00566371 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D82A0FF01D31DCCE00566371 /* HSAlertViewTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D82A0FF21D31DCCE00566371 /* HSAlertViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				D82A0FF61D31DCCE00566371 /* AppDelegate.h */,
+				D82A0FF71D31DCCE00566371 /* AppDelegate.m */,
+				D82A0FF91D31DCCE00566371 /* ViewController.h */,
+				D82A0FFA1D31DCCE00566371 /* ViewController.m */,
+				D82A0FFC1D31DCCE00566371 /* Main.storyboard */,
+				D82A0FFF1D31DCCE00566371 /* Assets.xcassets */,
+				D82A10011D31DCCE00566371 /* LaunchScreen.storyboard */,
+				D82A10041D31DCCE00566371 /* Info.plist */,
+				D82A0FF31D31DCCE00566371 /* Supporting Files */,
+			);
+			path = HSAlertViewTest;
+			sourceTree = "<group>";
+		};
+		D82A0FF31D31DCCE00566371 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D82A0FF41D31DCCE00566371 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D82A0FEF1D31DCCE00566371 /* HSAlertViewTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82A10071D31DCCE00566371 /* Build configuration list for PBXNativeTarget "HSAlertViewTest" */;
+			buildPhases = (
+				D82A0FEC1D31DCCE00566371 /* Sources */,
+				D82A0FED1D31DCCE00566371 /* Frameworks */,
+				D82A0FEE1D31DCCE00566371 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HSAlertViewTest;
+			productName = HSAlertViewTest;
+			productReference = D82A0FF01D31DCCE00566371 /* HSAlertViewTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D82A0FE81D31DCCE00566371 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Hansen;
+				TargetAttributes = {
+					D82A0FEF1D31DCCE00566371 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = C79X8YQ6R8;
+					};
+				};
+			};
+			buildConfigurationList = D82A0FEB1D31DCCE00566371 /* Build configuration list for PBXProject "HSAlertViewTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D82A0FE71D31DCCE00566371;
+			productRefGroup = D82A0FF11D31DCCE00566371 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D82A0FEF1D31DCCE00566371 /* HSAlertViewTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D82A0FEE1D31DCCE00566371 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82A10031D31DCCE00566371 /* LaunchScreen.storyboard in Resources */,
+				D82A10001D31DCCE00566371 /* Assets.xcassets in Resources */,
+				D82A0FFE1D31DCCE00566371 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D82A0FEC1D31DCCE00566371 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82A0FFB1D31DCCE00566371 /* ViewController.m in Sources */,
+				D82A0FF81D31DCCE00566371 /* AppDelegate.m in Sources */,
+				D82A100C1D31DD4400566371 /* HSAlertView.m in Sources */,
+				D82A0FF51D31DCCE00566371 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D82A0FFC1D31DCCE00566371 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82A0FFD1D31DCCE00566371 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D82A10011D31DCCE00566371 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82A10021D31DCCE00566371 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D82A10051D31DCCE00566371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D82A10061D31DCCE00566371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D82A10081D31DCCE00566371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HSAlertViewTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hansen.HSAlertViewTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D82A10091D31DCCE00566371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HSAlertViewTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hansen.HSAlertViewTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D82A0FEB1D31DCCE00566371 /* Build configuration list for PBXProject "HSAlertViewTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82A10051D31DCCE00566371 /* Debug */,
+				D82A10061D31DCCE00566371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82A10071D31DCCE00566371 /* Build configuration list for PBXNativeTarget "HSAlertViewTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82A10081D31DCCE00566371 /* Debug */,
+				D82A10091D31DCCE00566371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D82A0FE81D31DCCE00566371 /* Project object */;
+}
