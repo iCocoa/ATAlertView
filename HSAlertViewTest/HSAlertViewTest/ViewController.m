@@ -23,7 +23,6 @@
     UIButton *button = nil;
     CGRect frame = CGRectMake(50, 100, 150, 40);
     button = [[UIButton alloc] initWithFrame:frame];
-    button.center = self.view.center;
     [button setTitle:@"清除历史记录" forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:18];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];

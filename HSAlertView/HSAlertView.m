@@ -12,7 +12,7 @@ static CGFloat p_realSize(CGFloat size)
     return [UIScreen mainScreen].bounds.size.width / 375.0f * size;
 }
 
-static const NSTimeInterval kAnimationTime = 0.4;
+static const NSTimeInterval kAnimationTime = 0.5;
 
 static const CGFloat kTitleLabelHeight = 35;
 static const CGFloat kHSAlertViewWidth = 260;
@@ -21,7 +21,7 @@ static const CGFloat kButtonHeight = 44;
 
 @interface HSAlertView ()
 @property (nonatomic, strong) UIView *backgroundView;
-@property (nonatomic, strong) UIView *alertView;
+@property (nonatomic, strong) UIView *dialogView;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *contentLabel;
 @property (nonatomic, strong) UIView *buttonContainer;
@@ -44,14 +44,14 @@ static const CGFloat kButtonHeight = 44;
 {
     self = [super init];
     if (self) {
-        self.hidden = YES;
+//        self.hidden = YES;
         self.frame = [UIScreen mainScreen].bounds;
         self.alertViewStyle = HSAlertViewStyleDefault;
         [self addSubview:self.backgroundView];
-        [self addSubview:self.alertView];
-        [self.alertView addSubview:self.titleLabel];
-        [self.alertView addSubview:self.contentLabel];
-        [self.alertView addSubview:self.buttonContainer];
+        [self addSubview:self.dialogView];
+        [self.dialogView addSubview:self.titleLabel];
+        [self.dialogView addSubview:self.contentLabel];
+        [self.dialogView addSubview:self.buttonContainer];
         
         self.delegate = delegate;
         self.titleLabel.text = title;
@@ -67,27 +67,27 @@ static const CGFloat kButtonHeight = 44;
 {
     [super updateConstraints];
     
-    NSLayoutConstraint *alertViewCenterX = [NSLayoutConstraint constraintWithItem:self.alertView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
-    NSLayoutConstraint *alertViewCenterY = [NSLayoutConstraint constraintWithItem:self.alertView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
-    NSLayoutConstraint *alertViewWidth = [NSLayoutConstraint constraintWithItem:self.alertView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kHSAlertViewWidth];
+    NSLayoutConstraint *alertViewCenterX = [NSLayoutConstraint constraintWithItem:self.dialogView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
+    NSLayoutConstraint *alertViewCenterY = [NSLayoutConstraint constraintWithItem:self.dialogView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+    NSLayoutConstraint *alertViewWidth = [NSLayoutConstraint constraintWithItem:self.dialogView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kHSAlertViewWidth];
     [self addConstraints:@[alertViewCenterX,alertViewCenterY,alertViewWidth]];
     
-    NSLayoutConstraint *titleLabelTop = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.alertView attribute:NSLayoutAttributeTop multiplier:1 constant:p_realSize(10)];
-    NSLayoutConstraint *titleLabelLeading = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.alertView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
-    NSLayoutConstraint *titleLabelTrailing = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.alertView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *titleLabelTop = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.dialogView attribute:NSLayoutAttributeTop multiplier:1 constant:p_realSize(10)];
+    NSLayoutConstraint *titleLabelLeading = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.dialogView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *titleLabelTrailing = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.dialogView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
     NSLayoutConstraint *titleLabelHeight = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kTitleLabelHeight];
-    [self.alertView addConstraints:@[titleLabelTop,titleLabelLeading,titleLabelTrailing,titleLabelHeight]];
+    [self.dialogView addConstraints:@[titleLabelTop,titleLabelLeading,titleLabelTrailing,titleLabelHeight]];
     
     NSLayoutConstraint *contentLabelTop = [NSLayoutConstraint constraintWithItem:self.contentLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.titleLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
-    NSLayoutConstraint *contentLabelLeading = [NSLayoutConstraint constraintWithItem:self.contentLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.alertView attribute:NSLayoutAttributeLeading multiplier:1 constant:p_realSize(20)];
-    NSLayoutConstraint *contentLabelTrailing = [NSLayoutConstraint constraintWithItem:self.contentLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.alertView attribute:NSLayoutAttributeTrailing multiplier:1 constant:-p_realSize(20)];
-    [self.alertView addConstraints:@[contentLabelTop,contentLabelLeading,contentLabelTrailing]];
+    NSLayoutConstraint *contentLabelLeading = [NSLayoutConstraint constraintWithItem:self.contentLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.dialogView attribute:NSLayoutAttributeLeading multiplier:1 constant:p_realSize(20)];
+    NSLayoutConstraint *contentLabelTrailing = [NSLayoutConstraint constraintWithItem:self.contentLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.dialogView attribute:NSLayoutAttributeTrailing multiplier:1 constant:-p_realSize(20)];
+    [self.dialogView addConstraints:@[contentLabelTop,contentLabelLeading,contentLabelTrailing]];
     
     NSLayoutConstraint *buttonContainerTop = [NSLayoutConstraint constraintWithItem:self.buttonContainer attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:p_realSize(20)];
-    NSLayoutConstraint *buttonContainerLeading = [NSLayoutConstraint constraintWithItem:self.buttonContainer attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.alertView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
-    NSLayoutConstraint *buttonContainerTrailing = [NSLayoutConstraint constraintWithItem:self.buttonContainer attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.alertView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
-    NSLayoutConstraint *buttonContainerBottom = [NSLayoutConstraint constraintWithItem:self.buttonContainer attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.alertView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
-    [self.alertView addConstraints:@[buttonContainerTop,buttonContainerLeading,buttonContainerTrailing,buttonContainerBottom]];
+    NSLayoutConstraint *buttonContainerLeading = [NSLayoutConstraint constraintWithItem:self.buttonContainer attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.dialogView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *buttonContainerTrailing = [NSLayoutConstraint constraintWithItem:self.buttonContainer attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.dialogView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *buttonContainerBottom = [NSLayoutConstraint constraintWithItem:self.buttonContainer attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.dialogView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    [self.dialogView addConstraints:@[buttonContainerTop,buttonContainerLeading,buttonContainerTrailing,buttonContainerBottom]];
 }
 
 - (NSInteger)addButtonWithTitle:(NSString *)title
@@ -181,9 +181,15 @@ static const CGFloat kButtonHeight = 44;
     }
     
     [[UIApplication sharedApplication].keyWindow addSubview:self];
-    [UIView animateWithDuration:kAnimationTime animations:^{
-        self.hidden = NO;
-    }];
+    
+    self.dialogView.layer.opacity = 0.4f;
+    
+    [UIView animateWithDuration:kAnimationTime delay:0.0 options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         self.dialogView.layer.opacity = 1.0f;
+                     }
+                     completion:NULL
+     ];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(didPresentAlertView:)]) {
         [self.delegate didPresentAlertView:self];
@@ -229,9 +235,13 @@ static const CGFloat kButtonHeight = 44;
 
 - (void)dismiss
 {
-    [UIView animateWithDuration:kAnimationTime animations:^{
-        self.hidden = YES;
-    }];
+    self.dialogView.layer.opacity = 1.0f;
+    
+    [UIView animateWithDuration:kAnimationTime delay:0.0 options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+        self.dialogView.layer.opacity = 0.4f;
+    } completion:NULL];
+    
     [self removeFromSuperview];
 }
 
@@ -263,15 +273,15 @@ static const CGFloat kButtonHeight = 44;
     return _backgroundView;
 }
 
-- (UIView *)alertView
+- (UIView *)dialogView
 {
-    if (!_alertView) {
-        _alertView = [[UIView alloc] init];
-        _alertView.backgroundColor = [UIColor whiteColor];
-        _alertView.translatesAutoresizingMaskIntoConstraints = NO;
-        _alertView.alpha = 0.95;
+    if (!_dialogView) {
+        _dialogView = [[UIView alloc] init];
+        _dialogView.backgroundColor = [UIColor whiteColor];
+        _dialogView.translatesAutoresizingMaskIntoConstraints = NO;
+        _dialogView.alpha = 0.95;
     }
-    return _alertView;
+    return _dialogView;
 }
 
 - (UILabel *)titleLabel
