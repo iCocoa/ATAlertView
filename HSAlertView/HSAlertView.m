@@ -16,7 +16,7 @@ static const NSTimeInterval kAnimationTime = 0.5;
 
 static const CGFloat kTitleLabelHeight = 35;
 static const CGFloat kHSAlertViewWidth = 260;
-static const CGFloat kSeparatorLineWidth = 0.5;
+static const CGFloat kSeparatorLineWidth = 1;
 static const CGFloat kButtonHeight = 44;
 
 @interface HSAlertView ()

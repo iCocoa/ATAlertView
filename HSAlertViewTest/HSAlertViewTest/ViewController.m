@@ -33,7 +33,6 @@
 - (void)buttonClick:(UIButton *)sender
 {
     HSAlertView *alertView = [[HSAlertView alloc] initWithTitle:@"提示" message:@"你确定要清楚历史记录?" delegate:self cancelButtonTitle:@"No" confirmButtonTitle:@"Yes" otherButtonTitle:@""];
-    
     [alertView show];
 }
 
